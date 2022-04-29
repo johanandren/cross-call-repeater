@@ -1,0 +1,27 @@
+// This is the public API offered by your entity.
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "kalix/annotations.proto";
+import "google/api/annotations.proto";
+
+package com.example;
+
+message Request {
+}
+
+service ActionOne {
+  option (kalix.codegen) = {
+    action: { }
+  };
+
+  rpc DoIt(google.protobuf.Empty) returns (google.protobuf.Empty);
+}
+
+service ActionTwo {
+  option (kalix.codegen) = {
+    action: { }
+  };
+
+  rpc DoIt(google.protobuf.Empty) returns (google.protobuf.Empty);
+}
